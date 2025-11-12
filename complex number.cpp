@@ -1,0 +1,79 @@
+//the c++ program for complex number
+#include<iostream>
+using namespace std;
+class complex
+
+{private:
+float real;
+float imag;
+public:
+complex()
+{
+real=0;
+imag=0;
+}
+complex (float r,float i)
+{
+real=r;
+imag=i;
+}
+~complex()
+{ 
+
+}
+complex operator+(complex c)
+{
+    float r=real+c.real;
+    float i=imag+c.imag;
+    return(complex(r,i));
+}
+complex operator-(complex c)
+{
+    float r=real-c.real;
+    float i=imag-imag;
+    return(complex(r,i));
+}
+complex operator*(complex c)
+{
+    float r=real*c.real+imag*c.imag;
+    float i=imag*c.imag;
+    return(complex(r,i));
+}
+complex operator/(complex c)
+{
+    float r=((real*c.real)+(imag*c.imag))/((c.real*c.real)+(c.imag*c.imag));
+    float i=((real*c.real)-(imag*c.imag))/((c.real*c.real)+(c.imag*c.imag));
+    return(complex(r,i));
+}
+void display(void)
+{
+cout<<real<<"+"<<imag<<"i"<<endl;
+}
+};
+int main ()
+{
+    complex c1(6,4),c2(4,3);
+    cout<<"first complex number:";
+    c1.display();
+    cout<<"second complex number:";
+    c2.display();
+
+    complex sum=c1+c2;
+    cout<<"sum=";
+    sum.display();
+
+    complex diff=c1-c2;
+    cout<<"difference=";
+    diff.display();
+
+    complex prod=c1*c2;
+    cout<<"product=";
+    prod.display();
+
+    complex div=c1/c2;
+    cout<<"division=";
+    div.display();
+    return(0);
+}
+
+
