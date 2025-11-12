@@ -24,11 +24,12 @@ int main()
     cin>>a[i];
     cout<<"enter the target element";
     cin>>x;
-    int p=binary_search(a,n,x);
+    int p=binary_search(a,x,n);
     if(p==-1) cout<<"element not found";
     cout<<"element found at loc="<<p;
     return(0);
 
 }
+
 
 
