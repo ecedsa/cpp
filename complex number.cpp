@@ -36,15 +36,10 @@ complex operator-(complex c)
 complex operator*(complex c)
 {
     float r=real*c.real+imag*c.imag;
-    float i=imag*c.imag;
+    float i=imag*c.imag-imag*c.imag;
     return(complex(r,i));
 }
-complex operator/(complex c)
-{
-    float r=((real*c.real)+(imag*c.imag))/((c.real*c.real)+(c.imag*c.imag));
-    float i=((real*c.real)-(imag*c.imag))/((c.real*c.real)+(c.imag*c.imag));
-    return(complex(r,i));
-}
+
 void display(void)
 {
 cout<<real<<"+"<<imag<<"i"<<endl;
@@ -75,5 +70,6 @@ int main ()
     div.display();
     return(0);
 }
+
 
 
