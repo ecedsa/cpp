@@ -65,11 +65,9 @@ int main ()
     cout<<"product=";
     prod.display();
 
-    complex div=c1/c2;
-    cout<<"division=";
-    div.display();
     return(0);
 }
+
 
 
 
